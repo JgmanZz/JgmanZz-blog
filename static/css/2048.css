@@ -1,0 +1,218 @@
+#container {
+    text-align: center;
+}
+#div-2048 {
+    width: 395px;
+    height: 395px;
+    background-color: #bbada0;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.row {
+    float: left;
+    width: auto !important;
+    height: auto !important;
+    margin: 15px 0 0 0;
+}
+.base-block {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 0 0 0 15px;
+    background-color: rgba(238, 228, 218, 0.38);
+    border-radius: 5px;
+}
+.numBlock {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    font: normal bold 40px/80px arial,sans-serif;
+    text-align: center;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: default;
+    /*transition: top,left 0.5s;*/
+    /*-moz-transition: top,left 0.5s; !* Firefox 4 *!*/
+    /*-webkit-transition: all 1s; !* Safari 和 Chrome *!*/
+    /*-o-transition: top,left 0.5s; !* Opera *!*/
+}
+.block2 {
+    background-color: #eee4da;
+}
+.block4 {
+    background-color: #ede0c8;
+}
+.block8 {
+    color: #f9f6f2;
+    background-color: #f2b179;
+}
+.block16 {
+    color: #f9f6f2;
+    background-color: #f59563;
+}
+.block32 {
+    color: #f9f6f2;
+    background-color: #f67c5f;
+}
+.block64 {
+    color: #f9f6f2;
+    background-color: #f65e3b;
+}
+.block128 {
+    color: #f9f6f2;
+    background-color: #edcf72;
+}
+.block256 {
+    color: #f9f6f2;
+    background-color: #edcc61;
+}
+.block512 {
+    color: #f9f6f2;
+    background-color: #edc850;
+}
+.block1024 {
+    color: #f9f6f2;
+    background-color: #edc53f;
+    font-size: 30px;
+}
+.block1024 {
+    color: #f9f6f2;
+    background-color: #edc22e;
+    font-size: 30px;
+}
+
+@keyframes born {
+    0% { transform: scale(0);
+         -ms-transform: scale(0);		/* IE 9 */
+         -webkit-transform: scale(0);	/* Safari and Chrome */
+         -o-transform: scale(0);		/* Opera */
+         -moz-transform: scale(0); }	/* Firefox */
+    100% { transform: scale(1);
+           -ms-transform: scale(1);
+           -webkit-transform: scale(1);
+           -o-transform: scale(1);
+           -moz-transform: scale(1); }
+}
+@-moz-keyframes born {                  /* Firefox */
+    0% { transform: scale(0);
+         -ms-transform: scale(0);
+         -webkit-transform: scale(0);
+         -o-transform: scale(0);
+         -moz-transform: scale(0); }
+    100% { transform: scale(1);
+           -ms-transform: scale(1);
+           -webkit-transform: scale(1);
+           -o-transform: scale(1);
+           -moz-transform: scale(1); }
+}
+@-webkit-keyframes born {               /* Safari 和 Chrome */
+    0% { transform: scale(0);
+         -ms-transform: scale(0);
+         -webkit-transform: scale(0);
+         -o-transform: scale(0);
+         -moz-transform: scale(0); }
+    100% { transform: scale(1);
+           -ms-transform: scale(1, 1);
+           -webkit-transform: scale(1);
+           -o-transform: scale(1);
+           -moz-transform: scale(1); }
+}
+@-o-keyframes born {                    /* Opera */
+    0% { transform: scale(0);
+         -ms-transform: scale(0);
+         -webkit-transform: scale(0);
+         -o-transform: scale(0);
+         -moz-transform: scale(0); }
+    100% { transform: scale(1);
+           -ms-transform: scale(1);
+           -webkit-transform: scale(1);
+           -o-transform: scale(1);
+           -moz-transform: scale(1); }
+}
+.born {
+    animation: born ease 0.2s 1 ;
+    /* Firefox: */
+    -moz-animation: born ease 0.2s 1 ;
+    /* Safari 和 Chrome: */
+    -webkit-animation: born ease 0.2s 1 ;
+    /* Opera: */
+    -o-animation: born ease 0.2s 1 ;
+}
+
+@keyframes add {
+    0% { transform: scale(1);
+         -ms-transform: scale(1);		/* IE 9 */
+         -webkit-transform: scale(1);	/* Safari and Chrome */
+         -o-transform: scale(1);		/* Opera */
+         -moz-transform: scale(1); }	/* Firefox */
+    50% { transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -moz-transform: scale(1.2); }
+    100% { transform: scale(1);
+           -ms-transform: scale(1);
+           -webkit-transform: scale(1);
+           -o-transform: scale(1);
+           -moz-transform: scale(1); }
+}
+@-moz-keyframes add {                  /* Firefox */
+    0% { transform: scale(1);
+         -ms-transform: scale(1);
+         -webkit-transform: scale(1);
+         -o-transform: scale(1);
+         -moz-transform: scale(1); }
+    50% { transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -moz-transform: scale(1.2); }
+    100% { transform: scale(1);
+           -ms-transform: scale(1);
+           -webkit-transform: scale(1);
+           -o-transform: scale(1);
+           -moz-transform: scale(1); }
+}
+@-webkit-keyframes add {               /* Safari 和 Chrome */
+    0% { transform: scale(1);
+         -ms-transform: scale(1);
+         -webkit-transform: scale(1);
+         -o-transform: scale(1);
+         -moz-transform: scale(1); }
+    50% { transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -moz-transform: scale(1.2); }
+    100% { transform: scale(1);
+           -ms-transform: scale(1);
+           -webkit-transform: scale(1);
+           -o-transform: scale(1);
+           -moz-transform: scale(1); }
+}
+@-o-keyframes add {                    /* Opera */
+    0% { transform: scale(1);
+         -ms-transform: scale(1);
+         -webkit-transform: scale(1);
+         -o-transform: scale(1);
+         -moz-transform: scale(1); }
+    50% { transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -moz-transform: scale(1.2); }
+    100% { transform: scale(1);
+           -ms-transform: scale(1);
+           -webkit-transform: scale(1);
+           -o-transform: scale(1);
+           -moz-transform: scale(1); }
+}
+.scale {
+    animation: add ease 0.2s 1 ;
+    /* Firefox: */
+    -moz-animation: add ease 0.2s 1 ;
+    /* Safari 和 Chrome: */
+    -webkit-animation: add ease 0.2s 1 ;
+    /* Opera: */
+    -o-animation: add ease 0.2s 1 ;
+}

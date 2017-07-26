@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+#header {
+    height: 50px;
+    border-bottom: 1px solid rgba(140, 140, 140, 0.06);
+    box-shadow: 0 1px 1px rgba(18, 21, 18, 0.41);
+    text-align: center;
+}
+#menu-bar {
+    height: 100%;
+}
+.a-header-menu {
+    text-decoration: none;
+    display: inline-block;
+    width: auto;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+.a-header-menu:link {color: black}
+.a-header-menu:visited {color: black}
+.a-header-menu:hover {color: #AAAAFF}
+.a-header-menu:active {color: #AAAAFF}
